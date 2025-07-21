@@ -1,0 +1,33 @@
+import Dashboard from '@/components/sections/admin/dashboard/Dashboard';
+import PageWrapper from '@/components/wrappers/PageWrapper';
+
+import React from 'react';
+import AdminLayout from '../AdminLayout';
+import AdminRoute from '@/components/wrappers/AdminRoute';
+import Gallery from '@/components/sections/admin/dashboard/gallery/Gallery';
+
+export const metadata = {
+  title: 'Admin Gallery | GYS Technologies',
+  description:
+    'Discover the story behind GYS Technologies, our mission, and how we deliver exceptional digital solutions globally.',
+ 
+};
+
+
+const page = () => {
+  return (
+    <div className="font-[family-name:var(--font-geist-sans)]">
+        <AdminRoute>
+            <PageWrapper>
+        <AdminLayout>
+        <Gallery/>
+        </AdminLayout>
+      </PageWrapper>
+      </AdminRoute>
+    </div>
+  );
+};
+
+export default page;
+
+
