@@ -44,7 +44,7 @@ export default function CreativeSection() {
             Creative Digital Marketing <br />That Delivers Real Results
           </h2>
           <p className="text-gray-600 dark:text-text-tertiary mb-6 text-sm md:text-base font-light leading-relaxed">
-            At Samsara Studio, we specialize in building impactful digital experiences that help businesses grow online. Our campaigns are purpose-built for your brand's unique voice and audience.
+           {` At Samsara Studio, we specialize in building impactful digital experiences that help businesses grow online. Our campaigns are purpose-built for your brand's unique voice and audience.`}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -77,7 +77,7 @@ export default function CreativeSection() {
             ))}
           </div>
           <p className="mt-6 text-gray-600 dark:text-text-tertiary text-sm md:text-base font-light leading-relaxed">
-            We don’t just execute—we collaborate. Every strategy we develop is backed by analytics and creativity, making sure your digital footprint reflects the value you provide. With our full-stack capabilities, you're equipped with everything you need to outperform your competition.
+            {`We don’t just execute—we collaborate. Every strategy we develop is backed by analytics and creativity, making sure your digital footprint reflects the value you provide. With our full-stack capabilities, you're equipped with everything you need to outperform your competition.`}
           </p>
         </motion.div>
 
