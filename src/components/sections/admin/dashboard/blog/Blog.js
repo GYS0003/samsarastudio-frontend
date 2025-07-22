@@ -53,7 +53,7 @@ const Blog = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     const keys = name.split('.');
-    
+
     if (keys.length === 1) {
       setFormData((prev) => ({ ...prev, [name]: value }));
     } else {
@@ -105,9 +105,9 @@ const Blog = () => {
   const addBulletPoint = () => {
     setFormData((prev) => ({
       ...prev,
-      intro: { 
-        ...prev.intro, 
-        bulletPoints: [...prev.intro.bulletPoints, ''] 
+      intro: {
+        ...prev.intro,
+        bulletPoints: [...prev.intro.bulletPoints, '']
       },
     }));
   };
@@ -116,26 +116,26 @@ const Blog = () => {
     if (formData.intro.bulletPoints.length > 1) {
       setFormData((prev) => ({
         ...prev,
-        intro: { 
-          ...prev.intro, 
-          bulletPoints: prev.intro.bulletPoints.filter((_, i) => i !== index) 
+        intro: {
+          ...prev.intro,
+          bulletPoints: prev.intro.bulletPoints.filter((_, i) => i !== index)
         },
       }));
     }
   };
 
   const addTip = () => {
-    setFormData((prev) => ({ 
-      ...prev, 
-      tips: [...prev.tips, { title: '' }] 
+    setFormData((prev) => ({
+      ...prev,
+      tips: [...prev.tips, { title: '' }]
     }));
   };
 
   const removeTip = (index) => {
     if (formData.tips.length > 1) {
-      setFormData((prev) => ({ 
-        ...prev, 
-        tips: prev.tips.filter((_, i) => i !== index) 
+      setFormData((prev) => ({
+        ...prev,
+        tips: prev.tips.filter((_, i) => i !== index)
       }));
     }
   };
@@ -163,7 +163,7 @@ const Blog = () => {
       } else {
         await createBlog(formData);
       }
-      
+
       // Reset form and close panel
       setFormData(getInitialForm());
       setEditingId(null);
@@ -197,10 +197,10 @@ const Blog = () => {
   // Improved ImagePreview component
   const ImagePreview = ({ src, alt, onRemove }) => {
     if (!src) return null;
-    
+
     // Add cache busting query parameter
     const srcWithCacheBuster = `${src}${src.includes('?') ? '&' : '?'}cb=${imageCacheBuster}`;
-    
+
     return (
       <div className="relative inline-block mt-2">
         <Image
@@ -208,14 +208,14 @@ const Blog = () => {
           alt={alt || 'Preview'}
           width={128}
           height={128}
-          className="w-32 h-32 object-cover rounded border dark:border-gray-700"
+          className="w-32 h-32 object-cover rounded border border-gray-300 dark:border-gray-700"
           unoptimized={src.startsWith('blob:')}
         />
         {onRemove && (
           <button
             type="button"
             onClick={onRemove}
-            className="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs"
+            className="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-gray-800 dark:text-white rounded-full w-6 h-6 flex items-center justify-center text-xs"
           >
             ×
           </button>
@@ -227,24 +227,24 @@ const Blog = () => {
   return (
     <div className="pt-16 max-w-6xl mx-auto">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold dark:text-gray-100">Blog Manager</h1>
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Blog Manager</h1>
         <button
           onClick={openCreatePanel}
-          className="bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 text-white px-4 py-2 rounded"
+          className="bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 text-gray-800 dark:text-white px-4 py-2 rounded"
         >
           + Add Blog
         </button>
       </div>
 
       {loading ? (
-        <p className="dark:text-gray-300">Loading...</p>
+        <p className="text-gray-800 dark:text-gray-300">Loading...</p>
       ) : blogs.length === 0 ? (
         <div className="text-center py-8">
-          <p className="dark:text-gray-300">No blogs found. Create your first blog!</p>
+          <p className="text-gray-800 dark:text-gray-300">No blogs found. Create your first blog!</p>
         </div>
       ) : (
         blogs.map((b) => (
-          <div key={b._id} className="p-4 border rounded shadow mb-4 flex justify-between items-center dark:bg-gray-800 dark:border-gray-700">
+          <div key={b._id} className="p-4 border rounded shadow mb-4 flex justify-between items-center bg-gray-200 dark:bg-gray-800 border-gray-400 dark:border-gray-700">
             <div className="flex items-center gap-4">
               {b.coverImage && (
                 <Image
@@ -256,20 +256,20 @@ const Blog = () => {
                 />
               )}
               <div>
-                <h2 className="text-lg font-semibold">{b.title}</h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{b.author} · {b.date}</p>
+                <h2 className="text-lg text-gray-800  dark:text-gray-200 font-semibold">{b.title}</h2>
+                <p className="text-sm text-gray-800  dark:text-gray-400">{b.author} · {b.date}</p>
               </div>
             </div>
             <div className="flex gap-2">
-              <button 
-                onClick={() => handleEdit(b)} 
-                className="bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white px-3 py-1 rounded"
+              <button
+                onClick={() => handleEdit(b)}
+                className="bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-gray-800 dark:text-white px-3 py-1 rounded"
               >
                 Edit
               </button>
-              <button 
-                onClick={() => handleDelete(b._id)} 
-                className="bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-white px-3 py-1 rounded"
+              <button
+                onClick={() => handleDelete(b._id)}
+                className="bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-gray-800 dark:text-white px-3 py-1 rounded"
               >
                 Delete
               </button>
@@ -281,7 +281,7 @@ const Blog = () => {
       {/* Side Panel */}
       <div className={`fixed top-0 right-0 w-full sm:w-[600px] h-full bg-white dark:bg-gray-900 shadow-lg dark:shadow-gray-800 z-50 transform transition-transform duration-300 ${openPanel ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="flex justify-between pt-16 items-center p-4 border-b dark:border-gray-700">
-          <h2 className="text-lg font-bold dark:text-gray-100">{editingId ? 'Edit Blog' : 'Create Blog'}</h2>
+          <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100">{editingId ? 'Edit Blog' : 'Create Blog'}</h2>
           <button onClick={() => setOpenPanel(false)}><X className="w-5 h-5" /></button>
         </div>
 
@@ -293,7 +293,11 @@ const Blog = () => {
                 placeholder="Unique ID (Slug)"
                 value={formData.id}
                 onChange={handleChange}
-                className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                className="w-full p-2 border rounded
+           bg-white text-gray-800 placeholder-gray-500 border-gray-300
+           dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600
+           focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+           transition-colors duration-200"
                 required
               />
             </div>
@@ -304,7 +308,11 @@ const Blog = () => {
                 placeholder="Title"
                 value={formData.title}
                 onChange={handleChange}
-                className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                className="w-full p-2 border rounded
+           bg-white text-gray-800 placeholder-gray-500 border-gray-300
+           dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600
+           focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+           transition-colors duration-200"
                 required
               />
             </div>
@@ -315,7 +323,11 @@ const Blog = () => {
                 placeholder="Author"
                 value={formData.author}
                 onChange={handleChange}
-                className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                className="w-full p-2 border rounded
+           bg-white text-gray-800 placeholder-gray-500 border-gray-300
+           dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600
+           focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+           transition-colors duration-200"
                 required
               />
             </div>
@@ -326,7 +338,11 @@ const Blog = () => {
                 placeholder="Date"
                 value={formData.date}
                 onChange={handleChange}
-                className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                className="w-full p-2 border rounded
+           bg-white text-gray-800 placeholder-gray-500 border-gray-300
+           dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600
+           focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+           transition-colors duration-200"
                 required
               />
             </div>
@@ -337,7 +353,11 @@ const Blog = () => {
                 placeholder="Read Time"
                 value={formData.readTime}
                 onChange={handleChange}
-                className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                className="w-full p-2 border rounded
+           bg-white text-gray-800 placeholder-gray-500 border-gray-300
+           dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600
+           focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+           transition-colors duration-200"
                 required
               />
             </div>
@@ -348,14 +368,22 @@ const Blog = () => {
                 type="file"
                 accept="image/*"
                 onChange={(e) => handleImageUpload(e, 'coverImage')}
-                className="w-full p-2 border rounded mb-2 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                className="w-full p-2 border rounded mb-2
+                bg-gray-50 text-gray-700 border-gray-300
+                dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+                focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-500
+                cursor-not-allowed opacity-90"
               />
               {formData.coverImage && (
                 <input
                   type="text"
                   value={formData.coverImage}
                   readOnly
-                  className="w-full p-2 border rounded mb-2 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                  className="w-full p-2 border rounded mb-2
+                        bg-gray-50 text-gray-700 border-gray-300
+                        dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+                        focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-500
+                        cursor-not-allowed opacity-90"
                 />
               )}
               <ImagePreview
@@ -368,21 +396,29 @@ const Blog = () => {
             </div>
 
             <div className="border-t dark:border-gray-700 pt-4">
-              <h3 className="font-semibold mb-2 dark:text-gray-100">Intro</h3>
+              <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-100">Intro</h3>
               <div>
-                <label className="block text-sm font-medium mb-2 dark:text-gray-300">Intro Image</label>
+                <label className="block text-sm font-medium mb-2 text-gray-800 dark:text-gray-300">Intro Image</label>
                 <input
                   type="file"
                   accept="image/*"
                   onChange={(e) => handleImageUpload(e, 'intro.image')}
-                  className="w-full p-2 border rounded mb-2 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                  className="w-full p-2 border rounded mb-2
+                  bg-gray-50 text-gray-700 border-gray-300
+                  dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+                  focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-500
+                  cursor-not-allowed opacity-90"
                 />
                 {formData.intro.image && (
                   <input
                     type="text"
                     value={formData.intro.image}
                     readOnly
-                    className="w-full p-2 border rounded mb-2 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                    className="w-full p-2 border rounded mb-2
+                    bg-gray-50 text-gray-700 border-gray-300
+                    dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+                    focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-500
+                    cursor-not-allowed opacity-90"
                   />
                 )}
                 <ImagePreview
@@ -403,12 +439,16 @@ const Blog = () => {
                   placeholder="Intro Text"
                   value={formData.intro.text}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                  className="w-full p-2 border rounded
+           bg-white text-gray-800 placeholder-gray-500 border-gray-300
+           dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-400 dark:border-gray-600
+           focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent
+           transition-colors duration-200"
                   rows={3}
                 />
               </div>
 
-              <div className="mt-2">
+              <div className="mt-2 text-gray-800 dark:text-gray-100">
                 <label className="block text-sm font-medium mb-2">Bullet Points</label>
                 {formData.intro.bulletPoints.map((point, i) => (
                   <div key={i} className="flex gap-2 mb-2">
@@ -422,7 +462,7 @@ const Blog = () => {
                       <button
                         type="button"
                         onClick={() => removeBulletPoint(i)}
-                        className="bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-white px-2 py-1 rounded text-sm"
+                        className="bg-red-500 hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-gray-800 dark:text-white px-2 py-1 rounded text-sm"
                       >
                         Remove
                       </button>
@@ -440,16 +480,16 @@ const Blog = () => {
             </div>
 
             <div className="border-t pt-4">
-              <h3 className="font-semibold mb-2 dark:text-gray-100">Tips</h3>
+              <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-100">Tips</h3>
               {formData.tips.map((tip, i) => (
-                <div key={i} className="border rounded p-3 mb-3 dark:border-gray-700 dark:bg-gray-800">
+                <div key={i} className="border rounded p-3 mb-3 border-gray-300 bg-gray-100 dark:border-gray-700 dark:bg-gray-800">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-medium dark:text-gray-300">Tip {i + 1}</span>
+                    <span className="text-sm font-medium text-gray-800 dark:text-gray-300">Tip {i + 1}</span>
                     {formData.tips.length > 1 && (
                       <button
                         type="button"
                         onClick={() => removeTip(i)}
-                        className="bg-red-500 text-white px-2 py-1 rounded text-xs"
+                        className="bg-red-500 text-gray-800 dark:text-white px-2 py-1 rounded text-xs"
                       >
                         Remove
                       </button>
@@ -459,7 +499,11 @@ const Blog = () => {
                     value={tip.title}
                     onChange={(e) => handleTipChange(i, 'title', e.target.value)}
                     placeholder="Tip Title"
-                    className="w-full p-2 border rounded mb-2 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                    className="w-full p-2 border rounded mb-2
+                    bg-gray-50 text-gray-700 border-gray-300
+                    dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+                    focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-500
+                    cursor-not-allowed opacity-90"
                   />
                 </div>
               ))}
@@ -473,14 +517,18 @@ const Blog = () => {
             </div>
 
             <div className="border-t pt-4">
-              <h3 className="font-semibold mb-2 dark:text-gray-100">Conclusion</h3>
+              <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-100">Conclusion</h3>
               <div>
                 <textarea
                   name="conclusion.text"
                   placeholder="Conclusion Text"
                   value={formData.conclusion.text}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded mb-2 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                  className="w-full p-2 border rounded mb-2
+                  bg-gray-50 text-gray-700 border-gray-300
+                  dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+                  focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-500
+                  cursor-not-allowed opacity-90"
                   rows={3}
                 />
               </div>
@@ -490,14 +538,22 @@ const Blog = () => {
                   type="file"
                   accept="image/*"
                   onChange={(e) => handleImageUpload(e, 'conclusion.image')}
-                  className="w-full p-2 border rounded mb-2 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                  className="w-full p-2 border rounded mb-2
+                  bg-gray-50 text-gray-700 border-gray-300
+                  dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+                  focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-500
+                  cursor-not-allowed opacity-90"
                 />
                 {formData.conclusion.image && (
                   <input
                     type="text"
                     value={formData.conclusion.image}
                     readOnly
-                    className="w-full p-2 border rounded mb-2 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-300"
+                    className="w-full p-2 border rounded mb-2
+                    bg-gray-50 text-gray-700 border-gray-300
+                    dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600
+                    focus:outline-none focus:ring-1 focus:ring-gray-400 dark:focus:ring-gray-500
+                    cursor-not-allowed opacity-90"
                   />
                 )}
                 <ImagePreview
@@ -511,15 +567,15 @@ const Blog = () => {
                   }}
                 />
               </div>
-          <div className="p-4 mb-25 border-t dark:border-gray-700">
-            <button
-              type="submit"
-              disabled={formLoading}
-              className="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 disabled:opacity-50 dark:disabled:opacity-40"
-            >
-              {formLoading ? (editingId ? 'Updating...' : 'Creating...') : (editingId ? 'Update Blog' : 'Create Blog')}
-            </button>
-          </div>
+              <div className="p-4 mb-25 border-t dark:border-gray-700">
+                <button
+                  type="submit"
+                  disabled={formLoading}
+                  className="w-full px-4 py-2 bg-green-600 text-gray-800 dark:text-white rounded hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 disabled:opacity-50 dark:disabled:opacity-40"
+                >
+                  {formLoading ? (editingId ? 'Updating...' : 'Creating...') : (editingId ? 'Update Blog' : 'Create Blog')}
+                </button>
+              </div>
             </div>
           </div>
 

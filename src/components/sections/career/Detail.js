@@ -20,7 +20,6 @@ export default function JobDetail() {
     phoneNumber: '',
     portfolioLink: '',
     linkedinUrl: '',
-    githubUrl: '',
     resume: null,
   });
 
@@ -83,10 +82,7 @@ export default function JobDetail() {
       isValid = false;
     }
 
-    if (formData.githubUrl && !formData.githubUrl.includes('github.com')) {
-      newErrors.githubUrl = 'Please enter a valid GitHub URL';
-      isValid = false;
-    }
+ 
 
     // File validation
     if (!formData.resume) {
@@ -139,7 +135,6 @@ export default function JobDetail() {
       submission.append('phoneNumber', formData.phoneNumber);
       submission.append('portfolioLink', formData.portfolioLink);
       submission.append('linkedinUrl', formData.linkedinUrl);
-      submission.append('githubUrl', formData.githubUrl);
       submission.append('resume', formData.resume);
 
       await submitJobApplication(submission);
@@ -151,7 +146,6 @@ export default function JobDetail() {
         phoneNumber: '',
         portfolioLink: '',
         linkedinUrl: '',
-        githubUrl: '',
         resume: null,
       });
 
@@ -317,12 +311,7 @@ export default function JobDetail() {
                 name: 'linkedinUrl',
                 placeholder: 'LinkedIn URL (Optional)',
                 error: errors.linkedinUrl
-              },
-              {
-                name: 'githubUrl',
-                placeholder: 'GitHub URL (Optional)',
-                error: errors.githubUrl
-              },
+              }
             ].map((field, i) => (
               <div key={i} className="space-y-1">
                 <input

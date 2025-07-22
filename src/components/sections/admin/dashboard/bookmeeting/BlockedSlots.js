@@ -108,7 +108,7 @@ const BlockedSlots = () => {
                 day.slots.map((slot) => (
                   <tr
                     key={`${day.date}-${slot.time}`}
-                    className="text-center dark:text-white"
+                    className="text-center text-gray-800 dark:text-white"
                   >
                     <td className="border p-2 dark:border-gray-700">{day.date}</td>
                     <td className="border p-2 dark:border-gray-700">{slot.time}</td>
