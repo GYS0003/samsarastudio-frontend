@@ -37,7 +37,7 @@ const Footer = () => {
                 {[
                   { icon: "ri-instagram-line", link: "https://instagram.com" },
                   { icon: "ri-facebook-circle-line", link: "https://facebook.com" },
-                  { icon: "ri-reddit-line", link: "https://wa.me/918273370028" },
+                  { icon: "ri-reddit-line", link: "https://wa.me/917899754028" },
                   { icon: "ri-telegram-line", link: "tel:8273370028" },
                 ].map(({ icon, link }, idx) => (
                   <a
@@ -108,19 +108,21 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <i className="ri-map-pin-line text-lg text-white dark:text-white" />
                   <span className="text-sm font-medium text-gray-100 dark:text-indigo-100 hover:underline cursor-pointer">
-                  H.No C1 block D, New shivalik nagar, Haridwar Uttrakhand 249407
-                  </span>
+  Branch Office: Dehradun, Uttarakhand, India <br />
+  Branch Office: Whitefield, Bangalore, India
+</span>
+
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="ri-phone-line text-lg text-white dark:text-white" />
                   <span className="text-sm font-medium text-gray-100 dark:text-indigo-100 hover:underline cursor-pointer">
-                    +91 8273370028
+                    +91 7899754028
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="ri-mail-line text-lg text-white dark:text-white" />
                   <span className="text-sm font-medium text-gray-100 dark:text-indigo-100 hover:underline cursor-pointer">
-                    Hr@gystechnology.in
+                  business.samsarastudio@gmail.com
                   </span>
                 </div>
               </div>
