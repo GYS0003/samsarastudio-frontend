@@ -64,7 +64,7 @@ const GetInTouch = () => {
             </div>
             <div>
               <p className="font-semibold">Call Us</p>
-              <p className="text-sm">+91 8273370028</p>
+              <p className="text-sm">+91 7899754028</p>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ const GetInTouch = () => {
             </div>
             <div>
               <p className="font-semibold">Email Us</p>
-              <p className="text-sm">support@gystechnologies.com</p>
+              <p className="text-sm">business.samsarastudio@gmail.com</p>
             </div>
           </div>
 
@@ -84,7 +84,10 @@ const GetInTouch = () => {
             </div>
             <div>
               <p className="font-semibold">Address</p>
-              <p className="text-sm max-w-[300px]">H.No C1 block D, New shivalik nagar, Haridwar Uttrakhand 249407</p>
+              <p className="text-sm max-w-[300px]"><span className="text-sm font-medium text-gray-700 dark:text-gray-100 hover:underline cursor-pointer">
+  Branch Office: Dehradun, Uttarakhand, India <br />
+  Branch Office: Whitefield, Bangalore, India
+</span></p>
             </div>
           </div>
 
