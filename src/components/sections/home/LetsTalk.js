@@ -64,7 +64,7 @@ const GetInTouch = () => {
             </div>
             <div>
               <p className="font-semibold">Call Us</p>
-              <p className="text-sm">+91 2342342344</p>
+              <p className="text-sm">+91 8273370028</p>
             </div>
           </div>
 
@@ -84,7 +84,7 @@ const GetInTouch = () => {
             </div>
             <div>
               <p className="font-semibold">Address</p>
-              <p className="text-sm">123, Near Vasant Kunj, Gandhi Market, Agra</p>
+              <p className="text-sm max-w-[300px]">H.No C1 block D, New shivalik nagar, Haridwar Uttrakhand 249407</p>
             </div>
           </div>
 

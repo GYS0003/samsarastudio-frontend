@@ -59,7 +59,7 @@ const OurProductsSection = () => {
         </Link>
 
         {/* Product 2 (Updated to GYS Technologies) */}
-        <Link href="/gys-technologies">
+        <Link href="https://www.gystechnologies.in" passHref>
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
