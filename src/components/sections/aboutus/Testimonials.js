@@ -78,7 +78,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center py-20 relative z-10 overflow-hidden">
+    <section className=" flex flex-col justify-center items-center py-30 relative z-10 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

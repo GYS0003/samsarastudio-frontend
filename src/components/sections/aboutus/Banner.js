@@ -89,21 +89,21 @@ const Banner = () => {
             className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed"
             variants={fadeUpVariant}
           >
-            In today’s fast-evolving digital landscape, staying ahead requires
+            {`In today’s fast-evolving digital landscape, staying ahead requires
             more than just strategy—it demands vision. At Samsara Studio, we
             take a proactive and innovative approach to digital marketing. Our
             team blends deep industry insight with cutting-edge technologies
             like AI and machine learning to craft custom solutions that deliver
-            measurable results.
+            measurable results.`}
           </motion.p>
 
           <motion.p
             className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed"
             variants={fadeUpVariant}
           >
-            We don’t just follow trends—we create strategies that shape them.
+           {`We don’t just follow trends—we create strategies that shape them.
             Whether you’re a startup or an established brand, we help you grow,
-            scale, and succeed online.
+            scale, and succeed online.`}
           </motion.p>
 
           {/* CTA & Points */}

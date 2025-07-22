@@ -48,7 +48,7 @@ const BlogSection = () => {
   if (loading) return <div className="text-center py-20 text-xl text-gray-700 dark:text-gray-300">Loading...</div>;
 
   return (
-    <section className="relative z-10 w-full px-4 sm:px-8 lg:px-20 py-16 min-h-screen  text-gray-800 dark:text-white">
+    <section className="relative z-10 w-full px-4 sm:px-8 lg:px-20 py-30   text-gray-800 dark:text-white">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}

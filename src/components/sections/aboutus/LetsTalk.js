@@ -13,7 +13,7 @@ export default function LetsTalk() {
   return (
     <section
       ref={ref}
-      className="min-h-screen w-full relative bg-gradient-to-b to-[rgba(53,47,147,1)] from-[rgba(181,0,185,1)] dark:bg-none z-10 flex items-center justify-center  text-white px-4"
+      className="py-30 w-full relative bg-gradient-to-b to-[rgba(53,47,147,1)] from-[rgba(181,0,185,1)] dark:bg-none z-10 flex items-center justify-center  text-white px-4"
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
