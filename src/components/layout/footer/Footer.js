@@ -108,8 +108,8 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <i className="ri-map-pin-line text-lg text-white dark:text-white" />
                   <span className="text-sm font-medium text-gray-100 dark:text-indigo-100 hover:underline cursor-pointer">
-  Branch Office: Dehradun, Uttarakhand, India <br />
-  Branch Office: Whitefield, Bangalore, India
+  {`Branch Office: Dehradun, Uttarakhand, India`} <br />
+  {`Branch Office: Whitefield, Bangalore, India`}
 </span>
 
                 </div>

@@ -416,7 +416,7 @@ const BookCall = () => {
                             Meeting Scheduled Successfully!
                         </h2>
                         <p className="text-green-500 dark:text-green-400 mt-2">
-                            We've sent the details to your email
+                            {`We've sent the details to your email`}
                         </p>
                     </div>
                     
