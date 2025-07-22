@@ -191,7 +191,9 @@ const ServicesProvided = () => {
             >
               <GradientButton
                 as="link"
-                href="/tech"
+                href="https://www.gystechnologies.in"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-2 font-bold text-lg"
                 glowColor="purple"
               >

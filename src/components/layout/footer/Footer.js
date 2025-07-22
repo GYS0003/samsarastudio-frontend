@@ -37,8 +37,8 @@ const Footer = () => {
                 {[
                   { icon: "ri-instagram-line", link: "https://instagram.com" },
                   { icon: "ri-facebook-circle-line", link: "https://facebook.com" },
-                  { icon: "ri-reddit-line", link: "https://wa.me/919855575465" },
-                  { icon: "ri-telegram-line", link: "tel:9855575465" },
+                  { icon: "ri-reddit-line", link: "https://wa.me/918273370028" },
+                  { icon: "ri-telegram-line", link: "tel:8273370028" },
                 ].map(({ icon, link }, idx) => (
                   <a
                     key={idx}
@@ -60,11 +60,13 @@ const Footer = () => {
                   <ul className="space-y-4 font-medium">
                     {[
                       { name: "Samsara Adventures", link: "/products/samsara-adventures" },
-                      { name: "GYS Technologies", link: "/products/samsara-studio" },
-                 
+                      { name: "GYS Technologies", link: "https://gystechnologies.in" },
+
                     ].map((item, idx) => (
                       <li key={idx}>
                         <a
+                          target="_blank"
+                          rel="noopener noreferrer"
                           href={item.link}
                           className="text-gray-100 dark:text-indigo-100 hover:text-indigo-500 dark:hover:text-white transition-colors hover:underline underline-offset-2"
                         >
@@ -106,13 +108,13 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <i className="ri-map-pin-line text-lg text-white dark:text-white" />
                   <span className="text-sm font-medium text-gray-100 dark:text-indigo-100 hover:underline cursor-pointer">
-                    123, Near Vasant Kunj, Gandhi Market, Agra
+                  H.No C1 block D, New shivalik nagar, Haridwar Uttrakhand 249407
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="ri-phone-line text-lg text-white dark:text-white" />
                   <span className="text-sm font-medium text-gray-100 dark:text-indigo-100 hover:underline cursor-pointer">
-                    9855575465
+                    +91 8273370028
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -136,7 +138,7 @@ const Footer = () => {
           <p className="text-xs text-white dark:text-white mt-2 text-center md:text-right">
             Powered by{" "}
             <Link
-              href="https://gys-technologies.com"
+              href="https://gystechnologies.in"
               target="_blank"
               rel="noopener noreferrer"
               className=" cursor-pointer underline hover:underline-offset-2"
