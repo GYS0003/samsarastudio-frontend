@@ -35,7 +35,7 @@ const Footer = () => {
 
               <div className="flex justify-center gap-4">
                 {[
-                  { icon: "ri-instagram-line", link: "https://www.instagram.com/samsara.studio_/#" },
+                  { icon: "ri-instagram-line", link: "https://www.instagram.com/samsara.studio_/" },
                   { icon: "ri-facebook-circle-line", link: "https://facebook.com" },
                   { icon: "ri-reddit-line", link: "https://wa.me/917899754028" },
                   { icon: "ri-telegram-line", link: "tel:8273370028" },
