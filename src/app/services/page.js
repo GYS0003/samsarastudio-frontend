@@ -18,18 +18,18 @@ export const metadata = {
     'Creative Marketing Solutions',
     'Marketing Agency India',
   ],
-  metadataBase: new URL('https://www.samsarastudio.com'),
+  metadataBase: new URL('https://www.samsarastudio.co'),
   openGraph: {
     title: 'Our Services | Samsara Studio',
     description:
       'Discover how Samsara Studio helps businesses grow through tailored digital marketing strategies and impactful creative services.',
-    url: 'https://www.samsarastudio.com/services',
+    url: 'https://www.samsarastudio.co/services',
     siteName: 'Samsara Studio',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: '/assets/og/services-og.jpg', // Replace with actual OG image path
+        url: '/assets/og/services-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Samsara Studio Services',
@@ -41,14 +41,16 @@ export const metadata = {
     title: 'Our Services | Samsara Studio',
     description:
       'From SEO to branding, discover the full suite of digital marketing services by Samsara Studio that drive real business results.',
-    images: ['/assets/og/services-og.jpg'], // Replace with actual image path
-    site: '@samsarastudio', // Replace with your verified Twitter handle
+    images: ['/assets/og/services-og.jpg'],
+    site: '@samsarastudio', // Optional — update if actual Twitter exists
   },
   alternates: {
-    canonical: 'https://www.samsarastudio.com/services',
+    canonical: 'https://www.samsarastudio.co/services',
+  },
+  other: {
+    'instagram:profile': 'https://www.instagram.com/samsara.studio_/',
   },
 };
-
 
 
 const page = () => {

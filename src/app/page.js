@@ -17,21 +17,21 @@ export const metadata = {
     'Marketing Studio',
     'Creative Digital Solutions',
   ],
-  metadataBase: new URL('https://www.samsarastudio.com'),
+  metadataBase: new URL('https://www.samsarastudio.co'),
   alternates: {
-    canonical: 'https://www.samsarastudio.com',
+    canonical: 'https://www.samsarastudio.co',
   },
   openGraph: {
     title: 'Samsara Studio | Creative Digital Marketing Agency',
     description:
       'Discover Samsara Studio – your partner in SEO, branding, social media, and digital growth. We craft campaigns that inspire and convert.',
-    url: 'https://www.samsarastudio.com',
+    url: 'https://www.samsarastudio.co',
     siteName: 'Samsara Studio',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: '/assets/og/home-og.jpg', 
+        url: '/assets/og/home-og.jpg', // Make sure this exists in /public/assets/og/
         width: 1200,
         height: 630,
         alt: 'Samsara Studio Homepage',
@@ -43,13 +43,16 @@ export const metadata = {
     title: 'Samsara Studio | Creative Digital Marketing Agency',
     description:
       'From branding to digital campaigns, Samsara Studio helps businesses grow with strategy, creativity, and results.',
-    site: '@samsarastudio', 
-    images: ['/assets/og/home-og.jpg'], 
+    images: ['/assets/og/home-og.jpg'],
+    site: '@samsarastudio', // Optional if no active Twitter handle
   },
   robots: {
     index: true,
     follow: true,
     nocache: false,
+  },
+  other: {
+    'instagram:profile': 'https://www.instagram.com/samsara.studio_/',
   },
 };
 

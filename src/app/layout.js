@@ -18,10 +18,7 @@ const hind = Hind({
   variable: "--font-hind",
 });
 
-export const metadata = {
-  title: "Home | Vedims",
-  description: "Home description",
-};
+
 
 export default function RootLayout({ children }) {
   return (

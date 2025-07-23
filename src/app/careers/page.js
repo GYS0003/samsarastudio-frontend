@@ -18,18 +18,18 @@ export const metadata = {
     'Join Samsara Team',
     'Creative Marketing Jobs',
   ],
-  metadataBase: new URL('https://www.samsarastudio.com'),
+  metadataBase: new URL('https://www.samsarastudio.co'),
   openGraph: {
     title: 'Careers | Samsara Studio',
     description:
       'Discover exciting roles at Samsara Studio. Join our team of creatives, strategists, and marketers to build powerful digital campaigns.',
-    url: 'https://www.samsarastudio.com/careers',
+    url: 'https://www.samsarastudio.co/careers',
     siteName: 'Samsara Studio',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: '/assets/og/careers-og.jpg', // Replace with your actual image path
+        url: '/assets/og/careers-og.jpg', // Make sure this exists in your /public/assets/og folder
         width: 1200,
         height: 630,
         alt: 'Samsara Studio Careers',
@@ -41,13 +41,17 @@ export const metadata = {
     title: 'Careers | Samsara Studio',
     description:
       'Explore open roles at Samsara Studio. Be part of an innovative digital marketing team helping brands grow online.',
-    images: ['/assets/og/careers-og.jpg'], // Replace with actual image path
-    site: '@samsarastudio', // Replace with your real Twitter/X handle
+    images: ['/assets/og/careers-og.jpg'],
+    site: '@samsarastudio', // Remove or update based on real Twitter handle
   },
   alternates: {
-    canonical: 'https://www.samsarastudio.com/careers',
+    canonical: 'https://www.samsarastudio.co/careers',
+  },
+  other: {
+    'instagram:profile': 'https://www.instagram.com/samsara.studio_/',
   },
 };
+
 
 
 const page = () => {

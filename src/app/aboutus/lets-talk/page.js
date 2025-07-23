@@ -19,21 +19,21 @@ export const metadata = {
     'Content Strategy',
     'Samsara Studio Meeting',
   ],
-  metadataBase: new URL('https://www.samsarastudio.com'),
+  metadataBase: new URL('https://www.samsarastudio.co'),
   alternates: {
-    canonical: 'https://www.samsarastudio.com/lets-talk',
+    canonical: 'https://www.samsarastudio.co/lets-talk',
   },
   openGraph: {
     title: 'Let’s Talk | Book a Meeting | Samsara Studio',
     description:
       'Speak with Samsara Studio’s digital marketing experts. Let’s discuss how we can help grow your brand through strategic digital solutions.',
-    url: 'https://www.samsarastudio.com/lets-talk',
+    url: 'https://www.samsarastudio.co/lets-talk',
     siteName: 'Samsara Studio',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: '/assets/og/lets-talk-og.jpg', // Replace with actual image path
+        url: '/assets/og/lets-talk-og.jpg', // Ensure this image exists in public/assets/og
         width: 1200,
         height: 630,
         alt: 'Book a Meeting with Samsara Studio',
@@ -45,15 +45,19 @@ export const metadata = {
     title: 'Let’s Talk | Book a Meeting | Samsara Studio',
     description:
       'Book your strategy session with Samsara Studio to explore data-driven, creative digital marketing solutions.',
-    site: '@samsarastudio', // Replace with your real Twitter handle
-    images: ['/assets/og/lets-talk-og.jpg'], // Replace with actual image path
+    site: '@samsarastudio', // Optional, remove if Twitter/X isn’t active
+    images: ['/assets/og/lets-talk-og.jpg'],
   },
   robots: {
     index: true,
     follow: true,
     nocache: false,
   },
+  other: {
+    'instagram:profile': 'https://www.instagram.com/samsara.studio_/',
+  },
 };
+
 
 
 export default function Page() {
