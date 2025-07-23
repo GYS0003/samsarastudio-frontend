@@ -4,7 +4,7 @@ import PageWrapper from '@/components/wrappers/PageWrapper';
 export const metadata = {
   title: 'Samsara Studio | Creative Digital Marketing Agency',
   description:
-    'Samsara Studio is a full-service digital marketing agency delivering impactful SEO, branding, social media, and content strategies. Let’s grow your brand together.',
+    'Samsara Studio is a creative digital marketing agency offering SEO, branding, content, and social media strategies that grow your brand with impact.',
   keywords: [
     'Samsara Studio',
     'Digital Marketing Agency',
