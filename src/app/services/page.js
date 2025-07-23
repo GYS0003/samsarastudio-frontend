@@ -6,7 +6,7 @@ import OurServices from '@/components/sections/ourservices/OurServices';
 export const metadata = {
   title: 'Our Services | Samsara Studio',
   description:
-    'Explore the range of creative and performance-driven digital marketing services offered by Samsara Studio, including SEO, social media, branding, content strategy, and more.',
+    'Explore creative, performance-driven digital marketing services by Samsara Studio—SEO, social media, branding, content strategy, and more.',
   keywords: [
     'Samsara Studio Services',
     'Digital Marketing Agency',
