@@ -5,48 +5,52 @@ import OurServices from '@/components/sections/ourservices/OurServices';
 import Service from '@/components/sections/ourservices/services/Service';
 import Footer from '@/components/layout/footer/Footer';
 export const metadata = {
-  title: 'Our Services | GYS Technologies',
+  title: 'Services | Samsara Studio',
   description:
-    'Explore the wide range of custom digital services offered by GYS Technologies, including web development, mobile apps, UI/UX design, cloud solutions, and more.',
+    'Boost your brand with Samsara Studio’s digital marketing expertise. From SEO, content creation, influencer marketing to IT support, we help businesses grow online.',
   keywords: [
-    'GYS Technologies Services',
-    'Software Development',
-    'Web Development India',
-    'Mobile App Development',
-    'UI/UX Design Services',
-    'Custom Software Solutions',
-    'Cloud Development',
-    'Tech Services Company',
-    'IT Solutions Provider',
+    'Samsara Studio Digital Marketing',
+    'Brand Marketing and Management',
+    'Business Consultation',
+    'Content Creation Services',
+    'Influencer Marketing Agency',
+    'SEO and SMO Services',
+    'IT Support for Marketing',
+    'Online Growth Solutions',
+    'Digital Strategy Company',
+    'Marketing Services India',
   ],
-  metadataBase: new URL('https://www.gystechnologies.com'),
+  metadataBase: new URL('https://www.samsarastudio.co'),
   openGraph: {
-    title: 'Our Services | GYS Technologies',
+    title: 'Digital Marketing Services | Samsara Studio',
     description:
-      'Discover how GYS Technologies empowers businesses with cutting-edge web, mobile, and cloud solutions tailored to your needs.',
-    url: 'https://www.gystechnologies.com/services',
-    siteName: 'GYS Technologies',
+      'Samsara Studio offers end-to-end digital marketing services including SEO, content creation, influencer marketing, and business consultation.',
+    url: 'https://www.samsarastudio.co/services',
+    siteName: 'Samsara Studio',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: '/assets/og/services-og.jpg', // Replace with actual OG image path
+        url: '/assets/og/instagram-style-og.jpg', // Replace with actual path
         width: 1200,
         height: 630,
-        alt: 'GYS Technologies Services Overview',
+        alt: 'Samsara Studio Digital Marketing Overview',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Our Services | GYS Technologies',
+    title: 'Digital Marketing Services | Samsara Studio',
     description:
-      'Unlock your digital potential with GYS Technologies — from mobile apps to scalable cloud platforms.',
-    images: ['/assets/og/services-og.jpg'], // Replace with actual Twitter OG image path
-    site: '@gystechnologies',
+      'Grow your digital presence with Samsara Studio — experts in SEO, branding, influencer marketing and more.',
+    images: ['/assets/og/instagram-style-og.jpg'],
+    site: '@samsarastudio', // If not on Twitter, you can remove this
   },
   alternates: {
-    canonical: 'https://www.gystechnologies.com/services',
+    canonical: 'https://www.samsarastudio.co/services',
+  },
+  other: {
+    'instagram:profile': 'https://www.instagram.com/samsara.studio_/',
   },
 };
 
