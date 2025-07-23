@@ -97,9 +97,9 @@ const Banner = () => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          Digital Marketing
+          Digital Marketing Agency
         </motion.h1>
-        <motion.h1
+        <motion.h2
           className=" text-5xl font-medium  leading-tight md:leading-snug mb-6"
           variants={wordAnimation}
           initial="hidden"
@@ -122,7 +122,7 @@ const Banner = () => {
             {/* </motion.span> */}
           </span>
 
-        </motion.h1>
+        </motion.h2>
 
         {/* Animated Subtitle with Multiple Effects */}
         <motion.div
