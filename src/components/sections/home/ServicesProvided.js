@@ -48,22 +48,22 @@ const cardVariants = {
 const ServicesProvided = () => {
  
   const marketingItems = [
-   { text: "Brand Marketing and management", icon: <FiAward className="w-6 h-6 " /> },
-    { text: "SEO & SMO", icon: <FiBarChart2 className="w-6 h-6" /> },
+   { text: "Brand Marketing and Management", icon: <FiAward className="w-6 h-6 " /> },
+   { text: "Business Consultation", icon: <FiDollarSign className="w-6 h-6" /> },
+   { text: "Content Creation", icon: <FaMagic className="w-6 h-6" /> },
+   { text: "Influencer Marketing", icon: <FiSmartphone className="w-6 h-6" /> },
    { text: "IT support", icon: <FiMonitor className="w-6 h-6" /> },
-    { text: "Business Consultation", icon: <FiDollarSign className="w-6 h-6" /> },
-    { text: "Influencer Marketing", icon: <FiSmartphone className="w-6 h-6" /> },
-    { text: "Content Creation", icon: <FaMagic className="w-6 h-6" /> },
+   { text: "SEO & SMO", icon: <FiBarChart2 className="w-6 h-6" /> },
   ];
 
   const techItems = [
-    { text: "Blockchain", icon: <FiSettings className="w-6 h-6" /> },
-    { text: "Web Development", icon: <FiGlobe className="w-6 h-6" /> },
     { text: "App Development", icon: <FiCpu className="w-6 h-6" /> },
     { text: "Artificial Intelligence", icon: <FaRobot className="w-6 h-6" /> },
-     { text: "ERP Solutions", icon: <FiPackage className="w-6 h-6" /> },
-  { text: "CRM Systems", icon: <FiUsers className="w-6 h-6" /> },
-  { text: "E-commerce Platforms", icon: <FiShoppingCart className="w-6 h-6" /> },
+    { text: "Blockchain", icon: <FiSettings className="w-6 h-6" /> },
+    { text: "CRM Systems", icon: <FiUsers className="w-6 h-6" /> },
+    { text: "ERP Solutions", icon: <FiPackage className="w-6 h-6" /> },
+    { text: "E-commerce Platforms", icon: <FiShoppingCart className="w-6 h-6" /> },
+    { text: "Web Development", icon: <FiGlobe className="w-6 h-6" /> },
 
   ];
 
