@@ -295,7 +295,7 @@ const BookCall = () => {
                             min={new Date().toISOString().split("T")[0]}
                             max={(() => {
                                 const d = new Date();
-                                d.setDate(d.getDate() + 7);
+                                d.setDate(d.getDate() + 6);
                                 return d.toISOString().split("T")[0];
                             })()}
                             onChange={(e) => {
